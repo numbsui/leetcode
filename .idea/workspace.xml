@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5b44c4d-3ce5-4e1a-8746-bb5bcb1d9df6" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,19 +20,34 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="$USER_HOME$/.m2/repository" />
-        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+        <option name="localRepository" value="$USER_HOME$/software/apache-maven-3.2.3/repository" />
+        <option name="userSettingsFile" value="$USER_HOME$/software/apache-maven-3.2.3/conf/settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Y97EDLgzLHzG6nwmBrVy5nFMou" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -50,19 +64,7 @@
       <recent name="com.sld.linkedList" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.FindtheDuplicateNumber">
+  <component name="RunManager" selected="Application.Subsets">
     <configuration name="FindtheDuplicateNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sld.array.FindtheDuplicateNumber" />
       <module name="leetcode" />
@@ -76,8 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sld.od.Main4" />
+    <configuration name="Main6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sld.od.Main6" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -89,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sld.od.Main6" />
+    <configuration name="Subsets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sld.array.Subsets" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sld.od.*" />
+          <option name="PATTERN" value="com.sld.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Subsets" />
         <item itemvalue="Application.FindtheDuplicateNumber" />
         <item itemvalue="Application.TaskScheduler" />
         <item itemvalue="Application.SubstringwithConcatenationofAllWords" />
         <item itemvalue="Application.Main6" />
-        <item itemvalue="Application.Main4" />
       </list>
     </recent_temporary>
   </component>
@@ -166,11 +168,34 @@
       <workItem from="1584950958662" duration="8158000" />
       <workItem from="1585096734772" duration="109000" />
       <workItem from="1585099898957" duration="325000" />
+      <workItem from="1587439998532" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1587440076063">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1587440076063" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1587440076060">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1587440076060" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1587440076058">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1587440076058" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1587440076062">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1587440076062" />
+    <state x="141" y="39" key="SettingsEditor" timestamp="1587440033588">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1587440033588" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

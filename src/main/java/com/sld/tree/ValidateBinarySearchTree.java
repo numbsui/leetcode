@@ -20,7 +20,7 @@ public class ValidateBinarySearchTree {
         System.out.println(isValidBST2(root));
     }
 
-    //使用变量保存最大值和最小值，递归遍历
+    //方法一：使用变量保存最大值和最小值，递归遍历
     private static boolean isValidBST(TreeNode root) {
         return isValid(root, null, null);
     }
@@ -33,7 +33,7 @@ public class ValidateBinarySearchTree {
         return isValid(root.left, min, root.val) && isValid(root.right, root.val, max);
     }
 
-    //中序遍历二叉树，有序则是BST
+    //方法二：中序遍历二叉树，有序则是BST
     private static boolean isValidBST2(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         double inorder = - Double.MAX_VALUE;
