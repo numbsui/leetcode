@@ -38,6 +38,7 @@ public class ValidateBinarySearchTree {
         Stack<TreeNode> stack = new Stack<>();
         double inorder = - Double.MAX_VALUE;
 
+
         while (!stack.isEmpty() || root != null) {
             while (root != null) {
                 stack.push(root);
