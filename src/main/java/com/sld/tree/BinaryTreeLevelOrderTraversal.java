@@ -18,7 +18,7 @@ public class BinaryTreeLevelOrderTraversal {
         left.left = new TreeNode(2);
         right.left = new TreeNode(15);
         right.right = new TreeNode(7);
-        System.out.println(levelOrder(root));
+        System.out.println(levelOrder2(root));
     }
 
     //BFS
@@ -61,10 +61,8 @@ public class BinaryTreeLevelOrderTraversal {
 
         if (result.size() == level) {
             result.add(new ArrayList<>());
-            result.get(level).add(node.val);
-        } else {
-            result.get(level).add(node.val);
         }
+        result.get(level).add(node.val);
 
         dfs(node.left, level + 1, result);
         dfs(node.right, level + 1, result);
