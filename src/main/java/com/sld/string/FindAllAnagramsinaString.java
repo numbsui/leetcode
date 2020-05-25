@@ -12,10 +12,11 @@ import java.util.List;
 public class FindAllAnagramsinaString {
 
     public static void main(String[] args) {
-        //String s = "cbaebabacd";
-        String s = "baa";
-        String p = "aa";
-        System.out.println(findAnagrams2(s, p));
+        String s = "cbaebabacd";
+        String p = "abc";
+        //String s = "baa";
+        //String p = "aa";
+        System.out.println(findAnagrams(s, p));
     }
 
     //给定一个字符串 s 和一个非空字符串 p，找到 s 中所有是 p 的字母异位词的子串，返回这些子串的起始索引。
@@ -37,7 +38,7 @@ public class FindAllAnagramsinaString {
         for (int i = 0; i < p.length(); i++)
             arr1[p.charAt(i)]++;
 
-        //cbaebabacd   abc
+        //s  cbaebabacd   p  abc
         while (right != s.length()) {
             char c = s.charAt(right++);
             if (arr1[c] > 0) {
@@ -62,6 +63,7 @@ public class FindAllAnagramsinaString {
         return result;
     }
 
+    //s cbaebabacd   p abc
     private static List<Integer> findAnagrams2(String s, String p) {
         List<Integer> list = new ArrayList<>();
         if (s == null || s.length() == 0 || p == null || p.length() == 0) return list;

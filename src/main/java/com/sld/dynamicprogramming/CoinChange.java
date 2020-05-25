@@ -8,11 +8,14 @@ package com.sld.dynamicprogramming;
  */
 public class CoinChange {
     public static void main(String[] args) {
-        int[] coins = {2};
-        int amount = 3;
+        int[] coins = {2, 5, 1};
+        int amount = 11;
         System.out.println(coinChange(coins, amount));
     }
 
+    //dp[n] = min{dp[n], dp[n-coin]+1}
+    //dp[1] = min{dp[1], dp[0]+1}
+    //dp[2] = min{dp[2], dp[0]+1} min{dp[2], dp[1]+1}
     private static int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         for (int i = 1; i <= amount; i++) {

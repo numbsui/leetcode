@@ -22,6 +22,7 @@ public class BinaryTreeInorderTraversal {
 
         right.left = new TreeNode(0);
         right.right = new TreeNode(8);
+
         System.out.println(inorderTraversal2(root));
     }
 
