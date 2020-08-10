@@ -22,6 +22,20 @@ public class EditDistance {
         System.out.println(minDistance(word1, word2));
     }
 
+    //给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
+    //
+    //你可以对一个单词进行如下三种操作：
+    //
+    //插入一个字符
+    //删除一个字符
+    //替换一个字符
+    //
+    //输入：word1 = "horse", word2 = "ros"
+    //输出：3
+    //解释：
+    //horse -> rorse (将 'h' 替换为 'r')
+    //rorse -> rose (删除 'r')
+    //rose -> ros (删除 'e')
     private static int minDistance(String word1, String word2) {
 
         int[][] dp = new int[word1.length() + 1][word2.length() + 1];

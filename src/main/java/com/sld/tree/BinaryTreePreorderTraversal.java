@@ -25,7 +25,7 @@ public class BinaryTreePreorderTraversal {
         System.out.println(preorderTraversal2(root));
     }
 
-    //递归
+    //方法一：递归
     private static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         preOrder(root, result);
@@ -40,7 +40,7 @@ public class BinaryTreePreorderTraversal {
         preOrder(root.right, list);
     }
 
-    //非递归，使用stack实现
+    //方法二：非递归，使用stack实现
     private static List<Integer> preorderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();

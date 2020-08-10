@@ -22,10 +22,11 @@ public class BinaryTreeInorderTraversal {
 
         right.left = new TreeNode(0);
         right.right = new TreeNode(8);
+
         System.out.println(inorderTraversal2(root));
     }
 
-    //递归
+    //方法一 ：递归
     private static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         inOrder(root, result);
@@ -40,7 +41,7 @@ public class BinaryTreeInorderTraversal {
         inOrder(root.right, list);
     }
 
-    //非递归，使用stack实现
+    //方法二：非递归，使用stack实现
     private static List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
