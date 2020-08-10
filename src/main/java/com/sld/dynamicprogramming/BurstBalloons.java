@@ -8,7 +8,7 @@ import java.util.Arrays;
  * leetcode 312
  * https://leetcode.com/problems/burst-balloons/
  */
-public class MaxCoins {
+public class BurstBalloons {
 
     public static void main(String[] args) {
         int[] nums = {3, 1, 5, 8};
