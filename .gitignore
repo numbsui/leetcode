@@ -3,6 +3,8 @@
 /.idea
 /out
 *.iml
+.idea/vcs.xml
+.idea/workspace.xml
 
 #编译文件
 *.class
