@@ -37,9 +37,8 @@ public class FindAllNumbersDisappearedinanArray {
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int newIndex = Math.abs(nums[i]) - 1;
-            if (nums[newIndex] > 0) {
-                nums[newIndex] *= -1;
+            if (nums[Math.abs(nums[i]) - 1] > 0) {
+                nums[Math.abs(nums[i]) - 1] *= -1;
             }
         }
 

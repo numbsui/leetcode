@@ -9,7 +9,7 @@ package com.sld.dynamicprogramming;
 public class ClimbingStairs {
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 4;
         System.out.println(climbStairs(n));
     }
 

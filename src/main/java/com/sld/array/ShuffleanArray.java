@@ -6,8 +6,8 @@ import java.util.Random;
 /**
  * @author sld
  * <p>
- * leetcode 35
- * https://leetcode.com/problems/search-insert-position/
+ * leetcode 384
+ * https://leetcode.com/problems/shuffle-an-array/
  */
 public class ShuffleanArray {
 

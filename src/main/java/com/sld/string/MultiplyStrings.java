@@ -18,7 +18,7 @@ class MultiplyStrings {
      * 计算形式
      * num1
      * x num2
-     * ------
+     * ------   738  0516
      * result
      */
     private static String multiply(String num1, String num2) {
