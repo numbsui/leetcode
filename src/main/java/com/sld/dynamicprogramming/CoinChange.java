@@ -25,7 +25,11 @@ public class CoinChange {
             for (int coin : coins) {
                 if (coin <= i) {
                     //dp方程
+                    System.out.println("i:" + i);
+                    System.out.println("coin:" + coin);
                     dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                    System.out.println("dp[i]:" + dp[i]);
+                    System.out.println();
                 }
             }
         }

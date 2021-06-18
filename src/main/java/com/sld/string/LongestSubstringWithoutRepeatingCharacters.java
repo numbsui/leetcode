@@ -1,6 +1,9 @@
 package com.sld.string;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author sld
@@ -11,7 +14,8 @@ import java.util.*;
 public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring2("abcbacbb"));
+        //System.out.println(lengthOfLongestSubstring("abcabcbb"));
     }
 
     //使用滑动窗口
