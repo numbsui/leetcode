@@ -1,7 +1,5 @@
 package com.sld.array;
 
-import java.util.Arrays;
-
 /**
  * @author sld
  * <p>
