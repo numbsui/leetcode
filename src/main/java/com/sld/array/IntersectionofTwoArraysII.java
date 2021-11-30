@@ -10,6 +10,9 @@ import java.util.*;
  */
 public class IntersectionofTwoArraysII {
 
+    /**
+     * 给定两个数组，编写一个函数来计算它们的交集。
+     */
     public static void main(String[] args) {
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
