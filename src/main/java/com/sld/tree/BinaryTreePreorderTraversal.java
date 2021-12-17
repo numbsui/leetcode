@@ -10,6 +10,9 @@ import java.util.*;
  */
 public class BinaryTreePreorderTraversal {
 
+    /**
+     * 给你二叉树的根节点 root ，返回它节点值的前序遍历。
+     */
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         TreeNode left = root.left = new TreeNode(5);

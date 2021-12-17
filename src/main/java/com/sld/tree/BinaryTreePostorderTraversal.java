@@ -10,6 +10,9 @@ import java.util.*;
  */
 public class BinaryTreePostorderTraversal {
 
+    /**
+     * 给定一个二叉树，返回它的后序遍历。
+     */
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         TreeNode left = root.left = new TreeNode(5);
@@ -39,6 +42,7 @@ public class BinaryTreePostorderTraversal {
         postOrder(root.right, list);
         list.add(root.val);
     }
+
 
     //非递归，使用stack实现
     private static List<Integer> postorderTraversal2(TreeNode root) {

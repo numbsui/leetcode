@@ -8,6 +8,9 @@ package com.sld.linkedList;
  */
 public class SwapNodesInPairs {
 
+    /**
+     * 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。
+     */
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode l2 = new ListNode(2);
@@ -28,6 +31,7 @@ public class SwapNodesInPairs {
         }
     }
 
+    //1 2 3 4 5
     private static ListNode swapPairs(ListNode head) {
 
         ListNode tmpNode = new ListNode(0);
@@ -35,10 +39,12 @@ public class SwapNodesInPairs {
 
         ListNode p = tmpNode;
         while (p.next != null && p.next.next != null) {
-            ListNode n1 = p.next;
-            ListNode n2 = n1.next;
-            ListNode next = n2.next;
+            ListNode n1 = p.next;  //1
+            ListNode n2 = n1.next; //2
+            ListNode next = n2.next; //3
 
+            //n2 n1 n3
+            // 2  1  3
             n2.next = n1;
             n1.next = next;
             p.next = n2;

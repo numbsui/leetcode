@@ -10,6 +10,9 @@ import java.util.*;
  */
 public class BinaryTreeInorderTraversal {
 
+    /**
+     * 给定一个二叉树的根节点 root ，返回它的中序遍历。
+     */
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         TreeNode left = root.left = new TreeNode(5);
