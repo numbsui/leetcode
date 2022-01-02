@@ -8,6 +8,9 @@ package com.sld.linkedList;
  */
 public class RotateList {
 
+    /**
+     * 给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
+     */
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode l2 = new ListNode(2);

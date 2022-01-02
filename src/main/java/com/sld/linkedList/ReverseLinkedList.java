@@ -2,11 +2,15 @@ package com.sld.linkedList;
 
 /**
  * @author sld
- *
+ * <p>
  * leetcode 206
  * https://leetcode.com/problems/reverse-linked-list/
  */
 public class ReverseLinkedList {
+
+    /**
+     * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
+     */
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode l2 = new ListNode(2);
@@ -18,9 +22,7 @@ public class ReverseLinkedList {
         l3.next = l4;
         l4.next = null;
 
-        ListNode node = reverseList(head);
-        //ListNode node = reverseList2(head);
-
+        ListNode node = reverseList3(head);
         while (node != null) {
             System.out.println(node.val);
             node = node.next;
@@ -44,7 +46,7 @@ public class ReverseLinkedList {
 
     /**
      * 如： 1-2-3-4-null
-     * head节点在1，将tmpNode执行1，1与2之间截断，head指向2，编程tmpNode-1-null， 2-3-4-null
+     * head节点在1，将tmpNode指向1，1与2之间截断，head指向2，变成tmpNode-1-null， 2-3-4-null
      * 以此类推，最后得到 tmpNode-4-3-2-1-null，将head指向tmpNode下一个节点，tmpNode指向空，完成reverse
      */
     private static ListNode reverseList(ListNode head) {
@@ -62,5 +64,18 @@ public class ReverseLinkedList {
         tmpNode.next = null;
 
         return head;
+    }
+
+    private static ListNode reverseList3(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        ListNode next;
+        while (cur != null) {
+            next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
     }
 }

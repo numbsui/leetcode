@@ -10,6 +10,9 @@ import java.util.*;
  */
 class SortCharactersByFrequency {
 
+    /**
+     * 给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
+     */
     public static void main(String[] args) {
         String s = "tree";
         System.out.println(frequencySort3(s));
@@ -79,6 +82,11 @@ class SortCharactersByFrequency {
 
         StringBuilder res = new StringBuilder();
 
+        //时间复杂度：O(n + k)，其中 n 是字符串 s 的长度，k 是字符串 s 包含的不同字符的个数。
+        //遍历字符串统计每个字符出现的频率需要 O(n) 的时间。
+        //创建桶并将不同字符加入桶需要 O(k) 的时间。
+        //生成排序后的字符串，需要 O(k) 的时间遍历桶，以及 O(n) 的时拼接字符串间。
+        //因此总时间复杂度是 O(n + k)。
         for (int i = buckets.length - 1; i > 0; --i) {
             // 遍历每个桶
             if (buckets[i] != null) {

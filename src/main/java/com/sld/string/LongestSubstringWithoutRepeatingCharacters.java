@@ -13,8 +13,11 @@ import java.util.Set;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    /**
+     * 给定一个字符串 s ，请你找出其中不含有重复字符的最长子串的长度。
+     */
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring2("abcbacbb"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
         //System.out.println(lengthOfLongestSubstring("abcabcbb"));
     }
 

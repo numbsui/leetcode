@@ -8,6 +8,9 @@ package com.sld.linkedList;
  */
 public class MergeTwoSortedLists {
 
+    /**
+     * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+     */
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode l2 = new ListNode(2);
@@ -25,8 +28,29 @@ public class MergeTwoSortedLists {
         l22.next = l32;
         l32.next = null;
 
-        ListNode node = mergeTwoLists2(head, head2);
-        System.out.println(node);
+        ListNode node = mergeTwoLists3(head, head2);
+        while (node != null) {
+            System.out.println(node.val);
+            node = node.next;
+        }
+    }
+
+    //124  134   112344
+    private static ListNode mergeTwoLists3(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode(0);
+        ListNode result = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                dummy.next = new ListNode(list1.val);
+                list1 = list1.next;
+            } else {
+                dummy.next = new ListNode(list2.val);
+                list2 = list2.next;
+            }
+            dummy = dummy.next;
+        }
+        dummy.next = list1 == null ? list2 : list1;
+        return result.next;
     }
 
     private static ListNode mergeTwoLists2(ListNode l1, ListNode l2) {

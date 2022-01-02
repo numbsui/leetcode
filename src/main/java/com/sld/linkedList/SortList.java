@@ -8,22 +8,35 @@ package com.sld.linkedList;
  */
 public class SortList {
 
+    /**
+     * 给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
+     * <p>
+     * 进阶：你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？
+     */
     public static void main(String[] args) {
         ListNode head = new ListNode(2);
         ListNode l2 = new ListNode(1);
         ListNode l3 = new ListNode(4);
         ListNode l4 = new ListNode(3);
         ListNode l5 = new ListNode(5);
+        ListNode l6 = new ListNode(7);
+        ListNode l7 = new ListNode(8);
 
         head.next = l2;
         l2.next = l3;
         l3.next = l4;
         l4.next = l5;
-        l5.next = null;
+        l5.next = l6;
+        l6.next = l7;
+        l7.next = null;
 
         ListNode node = sortList(head);
-        System.out.println(node);
+        while (node != null) {
+            System.out.println(node.val);
+            node = node.next;
+        }
     }
+
 
     private static ListNode sortList(ListNode head) {
         if (head == null || head.next == null)

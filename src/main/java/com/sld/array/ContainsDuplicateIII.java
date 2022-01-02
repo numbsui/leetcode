@@ -12,25 +12,38 @@ import java.util.TreeSet;
  */
 public class ContainsDuplicateIII {
 
+    /**
+     * 给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，使得 abs(nums[i] - nums[j]) <= t ，
+     * 同时又满足 abs(i - j) <= k 。
+     * <p>
+     * 如果存在则返回 true，不存在返回 false。
+     */
     public static void main(String[] args) {
-        int[] nums = {-1, 2147483647};
+        /*int[] nums = {-1, 2147483647};
         int k = 1;
-        int t = 2147483647;
-        System.out.println(containsNearbyAlmostDuplicate2(nums, k, t));
+        int t = 2147483647;*/
+        int[] nums = {1, 2, 3, 1};
+        int k = 3;
+        int t = 0;
+        System.out.println(containsNearbyAlmostDuplicate(nums, k, t));
     }
 
     //方法一：平衡树
+    //[1,5,9,1,5,9], k = 3, t = 3
     private static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        TreeSet<Integer> set = new TreeSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            Integer ceil = set.ceiling(nums[i]);
-            if (ceil != null && ceil <= nums[i] + t) return true;
-
-            Integer floor = set.floor(nums[i]);
-            if (floor != null && nums[i] <= floor + t) return true;
-
-            set.add(nums[i]);
-            if (set.size() > k) set.remove(nums[i - k]);
+        int n = nums.length;
+        TreeSet<Long> ts = new TreeSet<>();
+        for (int i = 0; i < n; i++) {
+            Long u = (long) nums[i];
+            // 从 ts 中找到小于等于 u 的最大值（小于等于 u 的最接近 u 的数）
+            Long l = ts.floor(u);
+            // 从 ts 中找到大于等于 u 的最小值（大于等于 u 的最接近 u 的数）
+            Long r = ts.ceiling(u);
+            if (l != null && u - l <= t) return true;
+            if (r != null && r - u <= t) return true;
+            // 将当前数加到 ts 中，并移除下标范围不在 [max(0, i - k), i) 的数（维持滑动窗口大小为 k）
+            ts.add(u);
+            if (i >= k) ts.remove((long) nums[i - k]);
         }
         return false;
     }
