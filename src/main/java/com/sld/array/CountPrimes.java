@@ -15,6 +15,9 @@ public class CountPrimes {
         System.out.println(countPrimes(n));
     }
 
+    /**
+     * 给定整数 n ，返回 所有小于非负整数 n 的质数的数量 。
+     */
     private static int countPrimes(int n) {
         int result = 0;
         int[] primes = new int[n];

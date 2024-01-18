@@ -1,7 +1,9 @@
 package com.sld.array;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author sld
@@ -17,7 +19,7 @@ public class ContainsDuplicateII {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 1};
         int k = 3;
-        System.out.println(containsNearbyDuplicate(nums, k));
+        System.out.println(containsNearbyDuplicate2(nums, k));
     }
 
     private static boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -29,4 +31,21 @@ public class ContainsDuplicateII {
         }
         return false;
     }
+
+
+    private static boolean containsNearbyDuplicate2(int[] nums, int k) {
+
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+
+            if (i > k) {
+                set.remove(nums[i - k - 1]);
+            }
+            if (!set.add(nums[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
