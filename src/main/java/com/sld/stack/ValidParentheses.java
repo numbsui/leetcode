@@ -13,16 +13,16 @@ import java.util.Stack;
 public class ValidParentheses {
 
     /**
-     * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
-     *
+     * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串 s ，判断字符串是否有效。
+     * <p>
      * 有效字符串需满足：
-     *
+     * <p>
      * 左括号必须用相同类型的右括号闭合。
      * 左括号必须以正确的顺序闭合。
      */
     public static void main(String[] args) {
 
-        String s = "]";
+        String s = "[(){}]";
         System.out.println(isValid(s));
     }
 

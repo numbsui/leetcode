@@ -9,19 +9,23 @@ package com.sld.string;
 public class StringtoInteger {
 
     public static void main(String[] args) {
-        String str = "4193 with words";
-        System.out.println(Integer.MAX_VALUE);
+        String str = "-04193 with words";
+        //System.out.println(Integer.MAX_VALUE);
         System.out.println(myAtoi(str));
 
     }
 
-    private static int myAtoi(String str) {
-        if (str.length() == 0) return 0;
-        char[] charArray = str.toCharArray();
+    // -开头，后边是数字，输出数字； 后边不是数字，输出0
+    // 数字开头，找下一个非数字
+    // 非数字开头，输出0
+    //"    -1233"
+    private static int myAtoi(String s) {
+        if (s.length() == 0) return 0;
+        char[] charArray = s.toCharArray();
         int flag = 1;
         int i, pop;
         int result = 0;
-        for (i = 0; i < str.length(); i++) {
+        for (i = 0; i < s.length(); i++) {
             if (charArray[i] == '+') {
                 i++;
                 break;
@@ -38,9 +42,9 @@ public class StringtoInteger {
                 break;
         }
 
-        if (i == str.length()) return 0;
+        if (i == s.length()) return 0;
 
-        for (; i < str.length(); i++) {
+        for (; i < s.length(); i++) {
             if (charArray[i] < '0' || charArray[i] > '9') return result;
             pop = (charArray[i] - 48) * flag;
             if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && pop > 7))

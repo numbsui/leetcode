@@ -10,10 +10,12 @@ public class RemoveElement {
 
     public static void main(String[] args) {
         //int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
-        int[] nums = {3, 2, 2, 3};
-        int val = 2;
+        //int[] nums = {3, 2, 2, 3};
+        int[] nums = {1};
+        int val = 1;
         System.out.println(removeElement(nums, val));
     }
+
 
     private static int removeElement(int[] nums, int val) {
         int index = 0;

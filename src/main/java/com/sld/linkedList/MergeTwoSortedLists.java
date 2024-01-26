@@ -28,19 +28,22 @@ public class MergeTwoSortedLists {
         l22.next = l32;
         l32.next = null;
 
-        ListNode node = mergeTwoLists3(head, head2);
+        ListNode node = mergeTwoLists4(head, head2);
         while (node != null) {
             System.out.println(node.val);
             node = node.next;
         }
     }
 
-    //124  134   112344
-    private static ListNode mergeTwoLists3(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode(0);
+
+    private static ListNode mergeTwoLists4(ListNode list1, ListNode list2) {
+        if (list1 == null) return list2;
+        if (list2 == null) return list1;
+
+        ListNode dummy = new ListNode(-1);
         ListNode result = dummy;
         while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
+            if (list1.val <= list2.val) {
                 dummy.next = new ListNode(list1.val);
                 list1 = list1.next;
             } else {
@@ -49,9 +52,13 @@ public class MergeTwoSortedLists {
             }
             dummy = dummy.next;
         }
-        dummy.next = list1 == null ? list2 : list1;
+
+        if (list1 != null) dummy.next = list1;
+        if (list2 != null) dummy.next = list2;
         return result.next;
     }
+
+
 
     private static ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
 

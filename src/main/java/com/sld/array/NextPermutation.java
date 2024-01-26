@@ -11,62 +11,29 @@ import java.util.Arrays;
 public class NextPermutation {
 
     public static void main(String[] args) {
-        int[] nums = {4, 5, 2, 6, 3, 1};
+        //int[] nums = {4, 5, 2, 6, 3, 1};
+        int[] nums = {6, 5, 4, 3, 2, 1};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }
 
-
-    /**
-     * Implement next permutation, which rearranges numbers into the lexicographically next greaterpermutation of numbers.
-     * <p>
-     * If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).
-     * <p>
-     * The replacement must be in place and use only constant extra memory.
-     * <p>
-     * Example 1:
-     * <p>
-     * Input: nums = [1,2,3]
-     * Output: [1,3,2]
-     * <p>
-     * <p>
-     * Example 2:
-     * <p>
-     * Input: nums = [3,2,1]
-     * Output: [1,2,3]
-     * <p>
-     * <p>
-     * Example 3:
-     * <p>
-     * Input: nums = [1,1,5]
-     * Output: [1,5,1]
-     * <p>
-     * <p>
-     * Example 4:
-     * <p>
-     * Input: nums = [1]
-     * Output: [1]
-     *
-     * @param nums
-     */
     private static void nextPermutation(int[] nums) {
-
-        //4 5 2 6 3 1
-
-        //4 5 3 6 2 1
+        //1.从后往前找到 nums[i] < nums[i+1]的坐标
         int i = nums.length - 2;
         while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
 
+        //2.从后往前找到最接近nums[i]且比nums[i]大的数，进行交换
         if (i >= 0) {
             int j = nums.length - 1;
-            while (j >= 0 && nums[i] >= nums[j]) {
+            while (i <= j && nums[i] >= nums[j]) {
                 j--;
             }
             swap(nums, i, j);
         }
 
+        //3.让i后边元素升序排列
         reverse(nums, i + 1);
     }
 

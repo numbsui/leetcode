@@ -11,8 +11,11 @@ public class ReverseInteger {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
         System.out.println(reverse(Integer.MAX_VALUE));
+        System.out.println(reverse(-123));
     }
 
+    //-123  -321
+    //120   21
     private static int reverse(int x) {
         int result = 0;
         while (x != 0) {

@@ -3,8 +3,8 @@ package com.sld.array;
 /**
  * @author sld
  * <p>
- * leetcode 33
- * https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * leetcode 74
+ * https://leetcode.cn/problems/search-a-2d-matrix/
  */
 public class Search2DMatrix {
 

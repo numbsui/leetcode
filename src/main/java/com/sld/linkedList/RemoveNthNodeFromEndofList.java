@@ -28,13 +28,14 @@ public class RemoveNthNodeFromEndofList {
         l5.next = null;
 
         int n = 2;
-        ListNode node = removeNthFromEnd3(head, n);
+        ListNode node = removeNthFromEnd2(head, n);
         while (node != null) {
             System.out.println(node.val);
             node = node.next;
         }
 
     }
+
 
     //方法一： 遍历得到长度，在循环删除对应的节点
     private static ListNode removeNthFromEnd(ListNode head, int n) {

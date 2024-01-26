@@ -37,9 +37,10 @@ public class LetterCombinationsofaPhoneNumber {
     }
 
     private static void backTrace(String combination, String digits) {
-        if (digits.length() == 0)
+        if (digits.length() == 0) {
             output.add(combination);
-        else {
+            System.out.println(output);
+        } else {
             String digit = digits.substring(0, 1);
             String letters = phone.get(digit);
             for (int i = 0; i < letters.length(); i++) {
