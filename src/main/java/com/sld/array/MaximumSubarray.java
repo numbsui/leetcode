@@ -1,5 +1,7 @@
 package com.sld.array;
 
+import java.util.Arrays;
+
 /**
  * @author sld
  * <p>
@@ -10,7 +12,22 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(maxSubArray4(nums));
+        System.out.println(maxSubArray5(nums));
+    }
+
+    private static int maxSubArray5(int[] nums) {
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        int result = dp[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (dp[i - 1] > 0) {
+                dp[i] = dp[i - 1] + nums[i];
+            } else {
+                dp[i] = nums[i];
+            }
+            result = Math.max(result, dp[i]);
+        }
+        return result;
     }
 
     //方法一：暴力
@@ -71,13 +88,15 @@ public class MaximumSubarray {
         return sum;
     }
 
-    //方法四：动态规划
+    //方法四：动态规划   -2, 1, -3, 4, -1, 2, 1, -5, 4
     private static int maxSubArray4(int[] nums) {
         int sum = nums[0];
         for (int i = 1; i < nums.length; i++) {
             if (nums[i - 1] > 0)
                 nums[i] += nums[i - 1];
 
+            System.out.println("i: " + i);
+            System.out.println("nums[i]：" + nums[i]);
             sum = Math.max(nums[i], sum);
         }
         return sum;

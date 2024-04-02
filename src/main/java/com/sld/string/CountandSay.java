@@ -10,7 +10,26 @@ public class CountandSay {
 
     public static void main(String[] args) {
         int n = 4;
-        System.out.println(countAndSay(n));
+        System.out.println(countAndSay2(n));
+    }
+
+    private static String countAndSay2(int n) {
+        String num = "1";
+        for (int i = 2; i <= n; i++) {
+            StringBuilder sb = new StringBuilder();
+            int start = 0;
+            int index = 0;
+            while (index < num.length()) {
+                while (index < num.length() && num.charAt(start) == num.charAt(index)) {
+                    index++;
+                }
+                sb.append(index - start).append(num.charAt(start));
+                start = index;
+            }
+            num = sb.toString();
+        }
+        return num;
+
     }
 
     private static String countAndSay(int n) {

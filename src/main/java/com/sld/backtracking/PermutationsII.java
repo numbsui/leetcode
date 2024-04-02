@@ -1,4 +1,4 @@
-package com.sld.array;
+package com.sld.backtracking;
 
 import java.util.*;
 
@@ -6,15 +6,17 @@ import java.util.*;
  * @author sld
  * <p>
  * leetcode 47
+ * 相关：46 78 90
  * https://leetcode.com/problems/permutations-ii/
  */
 public class PermutationsII {
 
     public static void main(String[] args) {
 
-        int[] nums = {1, 1, 2};
+        int[] nums = {1, 1, 2, 1};
         System.out.println(permuteUnique2(nums));
     }
+
 
     //方法二： 回溯 剪枝
     private static List<List<Integer>> permuteUnique2(int[] nums) {

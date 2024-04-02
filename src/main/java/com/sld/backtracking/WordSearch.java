@@ -17,8 +17,6 @@ public class WordSearch {
         //String word = "ABCCED";
         //String word = "SEE";
         String word = "ABCB";
-        System.out.println(board.length);
-        System.out.println(board[0].length);
         System.out.println(exist(board, word));
     }
 

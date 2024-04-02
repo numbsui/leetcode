@@ -1,5 +1,7 @@
 package com.sld.string;
 
+import java.util.Arrays;
+
 /**
  * @author sld
  * <p>
@@ -11,7 +13,39 @@ class MultiplyStrings {
     public static void main(String[] args) {
         String num1 = "123";
         String num2 = "456";
-        System.out.println(multiply(num1, num2));
+        System.out.println(multiply2(num1, num2));
+    }
+
+    private static String multiply2(String num1, String num2) {
+        if (num1.equals("0") || num2.equals("0")) {
+            return "0";
+        }
+        int length1 = num1.length();
+        int length2 = num2.length();
+        int[] array = new int[length1 + length2];
+
+        for (int i = length1 - 1; i >= 0; i--) {
+            int n1 = num1.charAt(i) - '0';
+            for (int j = length2 - 1; j >= 0; j--) {
+                int n2 = num2.charAt(j) - '0';
+                array[i + j + 1] += n1 * n2;
+            }
+        }
+
+        for (int i = length1 + length2 - 1; i > 0; i--) {
+            int carry = array[i] / 10;
+            array[i - 1] += carry;
+            array[i] = array[i] % 10;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        if (array[0] != 0) {
+            sb.append(array[0]);
+        }
+        for (int i = 1; i < array.length; i++) {
+            sb.append(array[i]);
+        }
+        return sb.toString();
     }
 
     /**

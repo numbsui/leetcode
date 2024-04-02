@@ -13,9 +13,13 @@ import java.util.List;
 public class NQueens {
 
     public static void main(String[] args) {
-        System.out.println(solveNQueens(4));
+        System.out.println(solveNQueens(10));
     }
 
+    //0 1 0 0
+    //0 0 0 1
+    //1 0 0 0
+    //0 0 1 0
     private static List<List<String>> solveNQueens(int n) {
         List<List<String>> result = new ArrayList<>();
         helper(n, result, new ArrayList<>(), 0);

@@ -9,6 +9,7 @@ import java.util.Queue;
  * @author sld
  * <p>
  * leetcode 102
+ * 相关 102 1162 103 104 199 515 637
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  */
 public class BinaryTreeLevelOrderTraversal {
@@ -26,7 +27,6 @@ public class BinaryTreeLevelOrderTraversal {
         right.right = new TreeNode(7);
         System.out.println(levelOrder(root));
     }
-
 
     //BFS
     private static List<List<Integer>> levelOrder(TreeNode root) {

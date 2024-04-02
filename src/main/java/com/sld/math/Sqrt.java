@@ -10,7 +10,7 @@ public class Sqrt {
 
     public static void main(String[] args) {
         int x = 8;
-        System.out.println(mySqrt2(x));
+        System.out.println(mySqrt(x));
     }
 
     //方法一：使用二分查找

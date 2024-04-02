@@ -9,10 +9,10 @@ package com.sld.dynamicprogramming;
  * 字符串类的DP问题，状态是不容易定义的，一般可定义为：DP[i][j]
  * 对于此问题，状态方程可定义为：DP[i][j] i表示word1前i个字符 j表示word2前j个字符
  * 那么DP方程为：DP[i][j] =
- *              if word1[i] == word2[j]
- *                  DP[i-1][j-1]
- *              else
- *                  1+Min(DP[i-1][j], DP[i][j-1], DP[i-1][j-1])
+ * if word1[i] == word2[j]
+ * DP[i-1][j-1]
+ * else
+ * 1+Min(DP[i-1][j], DP[i][j-1], DP[i-1][j-1])
  * 上述else中三个表示insert delete replace
  */
 public class EditDistance {
@@ -22,7 +22,7 @@ public class EditDistance {
         System.out.println(minDistance(word1, word2));
     }
 
-    //给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
+    //给你两个单词word1 和word2，请你计算出将word1转换成word2 所使用的最少操作数。
     //
     //你可以对一个单词进行如下三种操作：
     //

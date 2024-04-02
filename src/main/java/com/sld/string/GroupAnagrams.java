@@ -22,7 +22,7 @@ class GroupAnagrams {
         System.out.println(groupAnagrams2(strs));
     }
 
-    //方法一：将字符串排序最为key，anagram列表作为value
+    //方法一：将字符串排序作为key，anagram列表作为value
     // [["bat"],["nat","tan"],["ate","eat","tea"]]
     private static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();

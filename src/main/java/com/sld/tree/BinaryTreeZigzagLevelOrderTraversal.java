@@ -1,14 +1,12 @@
 package com.sld.tree;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author sld
  * <p>
  * leetcode 103
+ * 相关 102 1162 103 104 199 515 637
  * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  */
 public class BinaryTreeZigzagLevelOrderTraversal {
@@ -28,32 +26,30 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
     //[1,2,3,4,null,null,5]
     private static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        if (root == null) return new LinkedList<>();
-
-        boolean flag = true;
         List<List<Integer>> result = new LinkedList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
+        if (root == null) return new ArrayList<>();
+        boolean flag = true;
+        Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            Deque<Integer> deque = new LinkedList<>();
-            int count = queue.size();
-            for (int i = 0; i < count; i++) {
+            int size = queue.size();
+            Deque<Integer> cur = new LinkedList<>();
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if (node != null) {
-                    if (!flag)
-                        deque.addFirst(node.val);
-                    else
-                        deque.addLast(node.val);
+                if (flag) {
+                    cur.add(node.val);
                 } else {
-                    node = new TreeNode(0);
+                    cur.addFirst(node.val);
                 }
                 if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
             }
-            result.add(new LinkedList<>(deque));
+            result.add(new LinkedList<>(cur));
             flag = !flag;
         }
         return result;
     }
+
+
 }
 

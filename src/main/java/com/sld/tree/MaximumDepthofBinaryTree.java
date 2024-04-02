@@ -1,12 +1,13 @@
 package com.sld.tree;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
  * @author sld
- *
+ * <p>
  * leetcode 104
+ * 相关 102 1162 103 104 199 515 637
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
  */
 public class MaximumDepthofBinaryTree {
@@ -25,21 +26,20 @@ public class MaximumDepthofBinaryTree {
 
     //BFS
     private static int maxDepth(TreeNode root) {
+        int result = 0;
         if (root == null) return 0;
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        int max = 0;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(root);
         while (!queue.isEmpty()) {
-            max ++;
+            result++;
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if (node.left != null) queue.offer(node.left);
-                if (node.right != null) queue.offer(node.right);
+                if (node.left != null) queue.add(node.left);
+                if (node.right != null) queue.add(node.right);
             }
         }
-        return max;
+        return result;
     }
 
     //DFS

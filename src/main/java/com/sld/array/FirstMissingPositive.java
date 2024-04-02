@@ -10,7 +10,7 @@ public class FirstMissingPositive {
 
     public static void main(String[] args) {
         int[] nums = {-1, 4, 2, 8, 9, 10};
-        System.out.println(firstMissingPositive2(nums));
+        System.out.println(firstMissingPositive(nums));
     }
 
     private static int firstMissingPositive(int[] nums) {

@@ -15,9 +15,31 @@ public class MergeInterval {
 
     public static void main(String[] args) {
         //int[][] intervals = {{2, 3}, {4, 5}, {6, 7}, {8, 9}, {1, 10}};
-        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        System.out.println(Arrays.deepToString(merge(intervals)));
+        //int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        int[][] intervals = {{2,3},{2,2},{3,3},{1,3},{5,7},{2,2},{4,6}};
+        System.out.println(Arrays.deepToString(merge2(intervals)));
 
+    }
+
+    private static int[][] merge2(int[][] intervals) {
+        if (intervals.length < 2) return intervals;
+        List<int[]> result = new ArrayList<>();
+        Arrays.sort(intervals, Comparator.comparingInt(value -> value[0]));
+        int[] tmp = intervals[0];
+        result.add(tmp);
+        for (int i = 1; i < intervals.length; i++) {
+            int[] interval = intervals[i];
+            if (interval[0] <= tmp[1]) {
+                int[] ints = result.get(result.size() - 1);
+                if (interval[1] >= tmp[1]) {
+                    ints[1] = interval[1];
+                }
+            } else {
+                result.add(interval);
+                tmp = interval;
+            }
+        }
+        return result.toArray(new int[0][]);
     }
 
     /**

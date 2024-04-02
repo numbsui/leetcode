@@ -47,7 +47,7 @@ public class ConstructBinaryTreefromPreorderandInorderTraversal {
     private static TreeNode buildTree2(int[] preorder, int[] inorder) {
         Map<Integer, Integer> inMap = new HashMap<>();
 
-        for(int i = 0; i < inorder.length; i++) {
+        for (int i = 0; i < inorder.length; i++) {
             inMap.put(inorder[i], i);
         }
 
@@ -70,7 +70,7 @@ public class ConstructBinaryTreefromPreorderandInorderTraversal {
     }
 
 
-    //递归
+    //打印结果
     private static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         inOrder(root, result);

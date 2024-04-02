@@ -44,6 +44,7 @@ public class ReverseLinkedList2 {
             pre = pre.next; //1
         }
         ListNode cur = pre.next; //2
+
         ListNode next;
         for (int i = 0; i < right - left; i++) {
             next = cur.next;

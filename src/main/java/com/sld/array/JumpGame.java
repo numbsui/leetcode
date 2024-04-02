@@ -9,9 +9,11 @@ package com.sld.array;
 public class JumpGame {
 
     public static void main(String[] args) {
-        int[] nums = {3, 2, 1, 0, 4};
-        System.out.println(canJump3(nums));
+        int[] nums = {2,3,1,1,4};
+        System.out.println(canJump4(nums));
     }
+
+
 
     //方法一：回溯   超时！！！
     private static boolean canJump(int[] nums) {
@@ -51,7 +53,7 @@ public class JumpGame {
         return false;
     }
 
-    //方法三：贪心算法
+    //方法三：贪心算法 3, 2, 1, 0, 4      12345
     private static boolean canJump3(int[] nums) {
         int end = nums.length - 1;
         for (int i = nums.length - 1; i >= 0; i--) {

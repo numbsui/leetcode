@@ -11,9 +11,9 @@ import java.util.*;
 public class CombinationSumII {
 
     public static void main(String[] args) {
-        int[] candidates = {2, 5, 2, 1, 2};
+        int[] candidates = {10,1,2,7,6,1,5};
         //1 1 2 5 6 7 10
-        int target = 5;
+        int target = 8;
         System.out.println(combinationSum2(candidates, target));
     }
 
@@ -31,6 +31,7 @@ public class CombinationSumII {
             return;
         }
 
+        //1 1 2 5 6 7 10
         for (int i = begin; i < length; i++) {
             //对于1 2 2 2 5  会出现1 2(第一个2) 2,还会出现1 2(第二个2) 2的情况,下边判断去除这种重复
             if (i > begin && candidates[i] == candidates[i - 1])

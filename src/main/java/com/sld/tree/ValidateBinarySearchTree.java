@@ -4,20 +4,21 @@ import java.util.Stack;
 
 /**
  * @author sld
- *
+ * <p>
  * leetcode 98
+ * 相关：98 501 530 783 173 230
  * https://leetcode.com/problems/validate-binary-search-tree/
  */
 public class ValidateBinarySearchTree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(5);
-        TreeNode left = root.left = new TreeNode(1);
-        TreeNode right = root.right = new TreeNode(6);
-
-        right.left = new TreeNode(3);
-        right.right = new TreeNode(8);
-        System.out.println(isValidBST2(root));
+        TreeNode root = new TreeNode(0);
+//        TreeNode left = root.left = new TreeNode(1);
+//        TreeNode right = root.right = new TreeNode(6);
+//
+//        right.left = new TreeNode(3);
+//        right.right = new TreeNode(8);
+        System.out.println(isValidBST(root));
     }
 
     //方法一：使用变量保存最大值和最小值，递归遍历
@@ -36,7 +37,7 @@ public class ValidateBinarySearchTree {
     //方法二：中序遍历二叉树，有序则是BST
     private static boolean isValidBST2(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-        double inorder = - Double.MAX_VALUE;
+        double inorder = -Double.MAX_VALUE;
 
 
         while (!stack.isEmpty() || root != null) {

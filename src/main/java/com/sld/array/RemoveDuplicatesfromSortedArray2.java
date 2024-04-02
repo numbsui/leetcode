@@ -11,8 +11,8 @@ import java.util.Arrays;
 public class RemoveDuplicatesfromSortedArray2 {
 
     public static void main(String[] args) {
-        //int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        int[] nums = {1, 2, 3};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        //int[] nums = {1, 2, 3};
         System.out.println(removeDuplicates(nums));
     }
 

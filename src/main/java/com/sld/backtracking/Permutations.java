@@ -1,4 +1,4 @@
-package com.sld.array;
+package com.sld.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import java.util.Stack;
  * @author sld
  * <p>
  * leetcode 46
+ * 相关：47 78 90
  * https://leetcode.com/problems/permutations/
  */
 public class Permutations {
@@ -19,6 +20,7 @@ public class Permutations {
         System.out.println(permute(nums));
     }
 
+
     private static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         func(nums, nums.length, 0, result);
@@ -28,6 +30,7 @@ public class Permutations {
     private static void func(int[] nums, int len, int cur, List<List<Integer>> list) {
         if (cur == len) {
             list.add(new ArrayList<>(stack));
+            System.out.println("list: " + list);
             return;
         }
         for (int num : nums) {

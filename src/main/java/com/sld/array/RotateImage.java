@@ -16,6 +16,7 @@ public class RotateImage {
                 {4, 5, 6},
                 {7, 8, 9}
         };
+
         rotate(matrix);
         System.out.println(Arrays.deepToString(matrix));
     }
